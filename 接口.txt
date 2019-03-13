@@ -1,0 +1,60 @@
+implementation'com.nostra13.universalimageloader:universal-image-loader:1.9.5'图片的依赖
+implementation 'com.android.support:design:28.0.0-rc01'横向滑动的依赖
+  横向滑动
+app:tabMaxWidth="0dp"
+      app:tabGravity="fill"
+      app:tabMode="fixed"
+------------------------------------------------------------------------------------
+    频道管理
+  清单文件里写的东西
+  <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+频道管理的依赖
+implementation 'com.android.support:design:28.0.0-rc01'
+    implementation 'com.github.andyoom:draggrid:v1.0.1
+
+   maven {
+            url "https://jitpack.io"
+        }
+------------------------------------------------------------------------------------------
+implementation 'com.squareup.okhttp3:okhttp:3.2.0'
+    implementation 'com.squareup.okio:okio:1.7.0'     okHttp依赖
+------------------------------------------------------------------
+implementation 'com.android.support:recyclerview-v7:28.+'  recyclerview的依赖
+implementation 'com.github.bumptech.glide:glide:4.9.0'     glide 图片依赖
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+------------------------------------------------------------------------------
+http://172.17.8.100/small/commodity/v1/bannerShow  展示列表的接口
+http://172.17.8.100/small/user/v1/login  
+http://172.17.8.100/small/user/v1/register
+http://www.wanandroid.com/tools/mockapi/6523/restaurant-list   二级展示列表接口
+---------------------------------------------------------------
+file:///android_asset/info.html
+file:///android_asset/infos.html
+file:///android_asset/newsinfo.html
+--------------------------------------------------
+查询购物车接口：http://172.17.8.100/ks/product/getCarts?uid=51
+加入购物车接口：http://172.17.8.100/ks/product/addCart?uid=51&pid=3
+---------------------------
+一级分类接口：http://172.17.8.100/ks/product/getCatagory
+二级分类：http://172.17.8.100/ks/product/getProductCatagory?cid=3
+二级分类下的商品列表：http://172.17.8.100/ks/product/getProducts?pscid=39
+ttp://172.17.8.100/ks/ad/getAd
+-----------------------------------------------------------
+蒋老师 2019/3/7 11:03:26
+首页轮播：http://172.17.8.100/ks/ad/getAd
+
+搜索接口：http://172.17.8.100/ks/product/searchProducts?keywords=1&page=1&sort=0
+---------------------------------------------------------
+String[] imgs = product.images.split("\\|");
+        if (imgs != null && imgs.length > 0) {
+
+            Glide.with(context).load(imgs[0]).into(myVh.iv);
+        }
+-------------------------------------------------------------------------------
+implementation 'com.jakewharton:butterknife:8.8.1'    圆形进度条的依赖
+annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
